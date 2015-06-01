@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 20px;
+}
+
+.container {
+  width: 960px;
+}
+/* navbar */
+
+.navbar-fixed-top {
+    background-color: #DDD;
+    border-color: #AAA;
+}
