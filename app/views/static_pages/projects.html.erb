@@ -1,2 +1,25 @@
-<h1>Current Projects</h1>
-<p>Currently, this website is my only project. In the future, projects will be added to this page.</p>
+<h2>Current Projects</h2>
+<table class="projects">
+	<tr>
+		<th class="name">Name</th>
+		<th class="description">Description</th>
+	</tr>
+	<tbody>
+		<tr>
+			<td class="name">
+				<%= link_to "Round Table", "https://round-tabe-pm.herokuapp.com", target:"_blank"%>
+			</td>
+			<td class="description">
+				Project Management Software. My first web app.
+			</td>
+		</tr>
+		<tr>
+			<td class="name">
+				IoT Clock Radio
+			</td>
+			<td class="description">
+				An IoT Clock Radio. Uses gtk3 gem for the gui, and ruby-mpd to connect to internet radio stations.
+			</td>
+		</tr>
+	</tbody>
+</table>

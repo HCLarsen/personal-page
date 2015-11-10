@@ -3,8 +3,17 @@
 
 /* universal */
 
+h2 {
+	text-align: center;
+}
+
 body {
   padding-top: 20px;
+}
+
+.content {
+	margin-left: 70px;
+	margin-right: 70px;	
 }
 
 .container {
@@ -15,4 +24,18 @@ body {
 .navbar-fixed-top {
     background-color: #DDD;
     border-color: #AAA;
+}
+
+/* projects page */
+
+.name {
+	width: 200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.description {
+	width: 500px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
