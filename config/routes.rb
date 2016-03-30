@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  #get 'posts/new'
+  #get 'posts/show'
+
+
   devise_for :admins
   root                'static_pages#home'
   get 'about'     =>  'static_pages#about'
   get 'projects'  =>  'static_pages#projects'
+
+  resources :posts, only: [:new, :create, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
