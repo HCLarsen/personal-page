@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    if params[:id] = 0
+    if params[:id] == "0"
       @post = Post.last
     else
       @post = Post.find(params[:id])

@@ -2,11 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.admin-options {
+.blog-footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   text-align: center;
+}
+
+.left {
+  float: left;
+  padding-left: 10px;
+}
+
+.right {
+  float: right;
+  padding-right: 10px;
 }
 
 #new_post {

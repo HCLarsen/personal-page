@@ -1,6 +1,21 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<div class="row">
+  <div class="col-sm-9 blog-main">
+    <p><%= @post.created_at.to_date  %></p>
+    <h1><%= @post.title %></h1>
+    <p><%= @post.content %></p>
 
-<div class="admin-options">
-  <%= link_to "Create New Post", new_post_path %>
+    <div class="blog-footer">
+      <% if @post != Post.first %>
+        <%= link_to "Previous Post", @post.previous, class: "left" %>
+      <% end %>
+      <% if @post != Post.last %>
+        <%= link_to "Next Post", @post.next, class: "right" %>
+      <% end %>
+      <% if admin_signed_in? %>
+        <%= link_to "Create New Post", new_post_path %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= render 'index' %>
 </div>

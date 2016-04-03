@@ -1,0 +1,18 @@
+<div class="col-sm-3 blog-sidebar">
+  <h3>Blogs by Date</h3>
+  <ul>
+    <% blog_index.each do |year_name, year| %>
+      <li><%= year_name %></li>
+      <ul>
+        <% year.each do |month_name, month| %>
+          <li><%= month_name %></li>
+          <ul>
+            <% month.each do |post| %>
+              <li><%= link_to post.title, post %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </ul>
+    <% end %>
+  </ul>
+</div>
