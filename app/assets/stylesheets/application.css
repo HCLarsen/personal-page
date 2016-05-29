@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+/* Enables formatting in blog posts */
+
+ p {
+ 	white-space: pre-wrap;
+ }
