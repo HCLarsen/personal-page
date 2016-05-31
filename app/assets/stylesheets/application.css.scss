@@ -16,6 +16,15 @@
 
 /* Enables formatting in blog posts */
 
- p {
- 	white-space: pre-wrap;
- }
+p {
+  white-space: pre-wrap;
+}
+
+.contact-info {
+  float: right;
+  list-style-type: none;
+  li > a {
+		float: right;
+    font-weight: bold;
+  }
+}
