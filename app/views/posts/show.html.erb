@@ -1,22 +1,23 @@
 <div class="row">
   <div class="col-sm-9 blog-main">
-    <p><%= @post.created_at.to_date  %></p>
     <h1><%= @post.title %></h1>
+    <p><%= @post.created_at.to_date  %></p>
     <p><%= @post.content %></p>
 
     <div id="comments">
       <h3>Comments</h3>
       <%= render @post.comments %>
+
+      <%= render 'comments/new', post: @post %>
     </div>
-    
-    <%= render 'comments/new', post: @post %>
+
 
     <div class="blog-footer">
       <% if @post != Post.first %>
-        <%= link_to "Previous Post", @post.previous, class: "left" %>
+        <%= link_to "Previous Post", @post.previous, class: "previous" %>
       <% end %>
       <% if @post != Post.last %>
-        <%= link_to "Next Post", @post.next, class: "right" %>
+        <%= link_to "Next Post", @post.next, class: "next" %>
       <% end %>
       <% if admin_signed_in? %>
         <%= link_to "Create New Post", new_post_path %>

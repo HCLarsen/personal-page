@@ -3,18 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .blog-footer {
-  margin-top: 45px;
+  margin: 45px 0px 45px 0px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   text-align: center;
 }
 
-.left {
+.previous {
   float: left;
   padding-left: 10px;
 }
 
-.right {
+.next {
   float: right;
   padding-right: 10px;
 }
