@@ -1,12 +1,16 @@
 require 'test_helper'
 
 class CommentsMailerTest < ActionMailer::TestCase
+  def setup
+    @comment = comments(:one)
+  end
+
   test "submitted" do
-    mail = CommentsMailer.submitted
-    assert_equal "Submitted", mail.subject
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
+    mail = CommentsMailer.submitted(@comment)
+    assert_equal "New comment on First Post", mail.subject
+    assert_equal ["clarsen@teksavvy.com"], mail.to
+    assert_equal ["from@christianlarsen.ca"], mail.from
+    assert_match "New Comment", mail.body.encoded
   end
 
 end
