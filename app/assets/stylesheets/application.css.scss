@@ -14,8 +14,29 @@
  *= require_self
  */
 
-/* Enables formatting in blog posts */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+/* universal */
+
+h2 {
+	text-align: center;
+}
+
+body {
+  padding-top: 20px;
+}
+
+.content {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.container {
+  width: 960px;
+}
+
+/* Enables formatting in blog posts */
 p {
   white-space: pre-wrap;
 }
@@ -27,4 +48,29 @@ p {
 		float: right;
     font-weight: bold;
   }
+}
+
+/* navbar */
+
+.navbar-fixed-top {
+    background-color: #DDD;
+    border-color: #AAA;
+}
+
+.navbar-right {
+	margin-right: 0px;
+}
+
+/* projects page */
+
+.name {
+	width: 200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.description {
+	width: 500px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

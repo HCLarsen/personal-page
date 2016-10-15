@@ -1,18 +1,18 @@
-<div class="row">
-  <div class="col-sm-9 blog-main">
+<div class="row content">
+  <article class="col-sm-9 blog-main">
     <h1><%= @post.title %></h1>
     <p><%= @post.created_at.to_date  %></p>
     <p><%= @post.content %></p>
 
-    <div id="comments">
+    <section id="comments">
       <h3>Comments</h3>
       <%= render @post.comments %>
 
       <%= render 'comments/new', post: @post %>
-    </div>
+    </section>
 
 
-    <div id="blog-footer">
+    <footer id="blog-footer">
       <% if @post != Post.first %>
         <%= link_to "Previous Post", @post.previous, class: "previous" %>
       <% end %>
@@ -22,8 +22,8 @@
       <% if @post != Post.last %>
         <%= link_to "Next Post", @post.next, class: "next" %>
       <% end %>
-    </div>
-  </div>
+    </footer>
+  </article>
 
   <%= render 'index' %>
 </div>
