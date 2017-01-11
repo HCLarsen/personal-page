@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      flash[:success] = "Blog Post Added"
       render 'show'
     else
       render 'new'

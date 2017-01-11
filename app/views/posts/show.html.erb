@@ -4,13 +4,14 @@
     <p><%= @post.created_at.to_date  %></p>
     <p><%= @post.content %></p>
 
+    <% if true %>
     <section id="comments">
       <h3>Comments</h3>
       <%= render @post.comments %>
 
       <%= render 'comments/new', post: @post %>
     </section>
-
+    <% end %>
 
     <footer id="blog-footer">
       <% if @post != Post.first %>
