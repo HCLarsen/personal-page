@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root                'static_pages#home'
   get 'about'     =>  'static_pages#about'
   get 'projects'  =>  'static_pages#projects'
+  get 'freelance' =>  'static_pages#freelance'
+  get 'open'      =>  'static_pages#open_source'
 
   resources :posts, only: [:new, :create, :show] do
     resources :comments
