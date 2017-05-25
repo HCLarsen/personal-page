@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :api do
+    resources :passwords, only: :index    
+  end
+
   devise_for :admins
   root                'static_pages#home'
   get 'about'     =>  'static_pages#about'
