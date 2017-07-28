@@ -33,7 +33,20 @@ body {
 }
 
 .container {
-  width: 960px;
+  width: 90%;
+}
+
+// Larger font for readability on small phones
+@media screen and (device-aspect-ratio: 40/71) {
+  p{
+    font-size: 24px;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 3) {
+  p{
+    font-size: 24px;
+  }
 }
 
 /* Enables formatting in blog posts */
