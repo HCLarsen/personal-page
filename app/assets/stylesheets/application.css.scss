@@ -38,13 +38,19 @@ body {
 
 // Larger font for readability on small phones
 @media screen and (device-aspect-ratio: 40/71) {
-  p, dd {
+	h2 {
+		font-size: 28px;
+	}
+  p, dt, dd {
     font-size: 24px;
   }
 }
 
 @media screen and (-webkit-device-pixel-ratio: 3) {
-  p, dd {
+	h2 {
+		font-size: 28px;
+	}
+  p, dt, dd {
     font-size: 24px;
   }
 }
