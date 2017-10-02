@@ -1,7 +1,15 @@
 module Api
   class PostsController < ApplicationController
+    def new
+      @post = Post.new
+    end
+
+    def create
+      # To be filled in later
+    end
+
     def index
-      @index = Post.all.map { |e| e.title }
+      @index = Post.all.map { |e| {"id" => e.id, "title" => e.title, "date" => e.created_at} }
       render json: @index, status: 200
     end
 
